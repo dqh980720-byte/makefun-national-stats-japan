@@ -141,3 +141,27 @@ export const PREFECTURES = [
   { name: 'Tottori', pop: 0.53, density: 151 },
 ];
 export const PREFECTURE_SOURCE = 'Statistics Bureau of Japan, Population Estimates by prefecture, 2024 (rounded)';
+
+// Top trading partners, share of total goods trade, 2024.
+export const TRADE_PARTNERS = [
+  { partner: 'United States', exportsShare: 19.8, importsShare: 10.6, note: 'largest export market' },
+  { partner: 'China', exportsShare: 17.9, importsShare: 22.1, note: 'largest import source' },
+  { partner: 'South Korea', exportsShare: 7.1, importsShare: 4.1, note: 'semiconductors, steel' },
+  { partner: 'Taiwan', exportsShare: 6.0, importsShare: 3.5, note: 'electronics' },
+  { partner: 'Australia', exportsShare: 2.4, importsShare: 6.4, note: 'coal, LNG, iron ore' },
+  { partner: 'Germany', exportsShare: 3.2, importsShare: 3.0, note: 'machinery, cars' },
+];
+export const TRADE_SOURCE = 'Ministry of Finance, Trade Statistics of Japan, 2024 (shares rounded)';
+
+// A short timeline of modern Japan, for context.
+export const TIMELINE = [
+  { year: 1868, event: 'Meiji Restoration: Japan opens to the world and begins rapid industrialisation.' },
+  { year: 1947, event: 'Post-war Constitution takes effect; Japan becomes a parliamentary democracy.' },
+  { year: 1964, event: 'Tokyo hosts the Olympic Games; the first Shinkansen bullet train opens.' },
+  { year: 1968, event: "Japan becomes the world's second-largest economy." },
+  { year: 1973, event: 'First oil shock ends the high-growth era; growth slows sharply.' },
+  { year: 1990, event: 'Asset-price bubble bursts; the "lost decades" of low growth begin.' },
+  { year: 2011, event: 'Great East Japan Earthquake and tsunami; Fukushima nuclear accident.' },
+  { year: 2019, event: 'Reiwa era begins with the accession of Emperor Naruhito.' },
+  { year: 2021, event: 'Tokyo hosts the Olympic and Paralympic Games, held a year late.' },
+];
