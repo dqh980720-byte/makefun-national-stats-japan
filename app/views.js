@@ -18,6 +18,9 @@ import {
   SOCIETY,
   PREFECTURES,
   PREFECTURE_SOURCE,
+  TRADE_PARTNERS,
+  TRADE_SOURCE,
+  TIMELINE,
 } from './data.js';
 import { lineChart, barChart } from './charts.js';
 
@@ -67,6 +70,12 @@ export function viewOverview() {
     <h2>At a glance: society</h2>
     ${statRows(SOCIETY)}
     <p class="source">Sources: see the Sources page for each figure.</p>
+  </section>
+  <section class="panel">
+    <h2>Modern Japan in brief</h2>
+    <dl class="stats">` + TIMELINE.map((t) =>
+      `<div class="stat"><dt>${t.year}</dt><dd><span>${t.event}</span></dd></div>`).join('') + `</dl>
+    <p class="source">Timeline: Encyclopaedia Britannica and the National Diet Library, for context only.</p>
   </section>`;
 }
 
@@ -123,6 +132,14 @@ export function viewEconomy() {
     ${barChart(SECTORS.map((s) => ({ label: s.sector, share: s.share })))}
     <p>${SECTORS.map((s) => `${s.sector} ${s.share}% — ${s.note}`).join(' · ')}</p>
     <p class="source">Source: ${SECTOR_SOURCE}.</p>
+  </section>
+  <section class="panel">
+    <h2>Top trading partners, 2024</h2>
+    <table>
+      <thead><tr><th>Partner</th><th>Share of exports</th><th>Share of imports</th><th>Main trade</th></tr></thead>
+      <tbody>${TRADE_PARTNERS.map((t) => `<tr><td>${t.partner}</td><td>${t.exportsShare}%</td><td>${t.importsShare}%</td><td>${t.note}</td></tr>`).join('')}</tbody>
+    </table>
+    <p class="source">Source: ${TRADE_SOURCE}.</p>
   </section>`;
 }
 
